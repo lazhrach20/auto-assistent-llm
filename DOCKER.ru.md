@@ -173,13 +173,15 @@ docker-compose up -d --scale scraper=3
 └──────────────┘    └──────────────┘    └──────────────┘
 ```
 
-## Размеры образов (приблизительно)
+## Размеры образов (реальные)
 
-- **Backend**: ~150MB (multi-stage сборка)
-- **Scraper**: ~150MB (та же база что и backend)
-- **Bot**: ~180MB (включает OpenAI клиент)
-- **Frontend**: ~25MB (Nginx + статические файлы)
-- **PostgreSQL**: ~80MB (Alpine база)
+- **Backend**: 232 MB (multi-stage сборка)
+- **Frontend**: 63 MB (Nginx + статические файлы)
+- **Bot**: 229 MB (включает OpenAI клиент)
+- **Scraper**: 194 MB (httpx + BeautifulSoup4)
+- **PostgreSQL**: 274 MB (Официальный `postgres:15-alpine`)
+
+**Итого: ~992 MB** (менее 1GB для всего стека)
 
 ## Функции безопасности
 
