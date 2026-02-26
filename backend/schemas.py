@@ -24,3 +24,10 @@ class CarResponse(BaseModel):
     link: str
     
     model_config = ConfigDict(from_attributes=True)
+
+
+class CarsListResponse(BaseModel):
+    """Schema for paginated cars list with cursor"""
+    items: list[CarResponse]
+    next_cursor: int | None
+    total: int

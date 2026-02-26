@@ -172,7 +172,7 @@ def format_car_message(cars: List[Car]) -> str:
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     """Handle /start command"""
-    welcome_text = """👋 Welcome to the Million Miles Car Search Bot!
+    welcome_text = """👋 Welcome to the Auto Assistent Car Search Bot!
 
 I can help you find cars based on your preferences. Just tell me what you're looking for in natural language!
 
@@ -246,7 +246,7 @@ async def main():
     """
     Main function to start the bot
     """
-    logger.info("🤖 Starting Million Miles Car Bot...")
+    logger.info("🤖 Starting Auto Assistent Car Bot...")
     logger.info(f"Using AI Model: {AI_MODEL}")
     
     try:
